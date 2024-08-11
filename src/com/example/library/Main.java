@@ -1,5 +1,6 @@
 package com.example.library;
 
+import com.example.library.forms.BookEditor;
 import com.example.library.forms.BookEditorExample;
 import com.example.library.forms.SaveButtonListener;
 
@@ -10,10 +11,10 @@ public class Main {
         // Launch the book editor form
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                BookEditorExample bookEditorExample = new BookEditorExample();
-                bookEditorExample.setVisible(true);
+                BookEditor bookEditor = new BookEditor();
+                bookEditor.setVisible(true);
 
-                bookEditorExample.setSaveButtonListener(new SaveButtonListener() {
+                bookEditor.setSaveButtonListener(new SaveButtonListener() {
                     @Override
                     public void onSaveClicked(Book book) {
                         System.out.println("Entered Book Details:");
